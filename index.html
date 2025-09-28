@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nourish with Nes | Holistic Nutrition & Wellness Coaching</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define custom colors and font */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --color-cream: #FDFDFB;
+            --color-sage: #8da9a7;
+            --color-terracotta: #F7A890;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-cream);
+            color: #333333;
+        }
+        
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .sage-bg { background-color: var(--color-sage); }
+        .sage-text { color: var(--color-sage); }
+        .terracotta-bg { background-color: var(--color-terracotta); }
+        
+        /* Utility for the Instagram feed simulation */
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        @media (max-width: 640px) {
+            .insta-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold sage-text">Nourish with Nes</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#services" class="hover:text-gray-900 transition duration-300">Work With Me</a>
+                <a href="#recipes" class="hover:text-gray-900 transition duration-300">Recipes & Blog</a>
+                <a href="#about" class="hover:text-gray-900 transition duration-300">About Nes</a>
+                <a href="#contact" class="hover:text-gray-900 transition duration-300">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 absolute w-full shadow-lg border-t border-gray-100">
+            <nav class="flex flex-col space-y-2 p-4 text-center">
+                <a href="#services" class="py-2 hover:bg-gray-50 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Work With Me</a>
+                <a href="#recipes" class="py-2 hover:bg-gray-50 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Recipes & Blog</a>
+                <a href="#about" class="py-2 hover:bg-gray-50 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Nes</a>
+                <a href="#contact" class="py-2 hover:bg-gray-50 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                
+                <!-- Text Content -->
+                <div class="md:w-1/2 order-2 md:order-1 text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
+                        Nourish Your Body. <span class="sage-text">Transform Your Health.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        Holistic nutrition coaching to help you achieve balance, confidence, and vibrant well-being—without restrictive dieting.
+                    </p>
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-lg terracotta-bg hover:opacity-90 transition duration-300 text-white transform hover:scale-[1.02]">
+                        Start Your Wellness Journey <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <img src="https://placehold.co/800x800/8da9a7/ffffff?text=Nes+Professional+Portrait" 
+                         alt="Professional portrait of Nes, a smiling nutritionist." 
+                         class="rounded-3xl shadow-2xl object-cover w-full h-auto transform rotate-1 transition duration-500 hover:rotate-0"
+                         onerror="this.onerror=null;this.src='https://placehold.co/800x800/8da9a7/ffffff?text=Nes+Professional+Portrait';" />
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Services Section (Work With Me) -->
+        <section id="services" class="py-20 md:py-32 sage-bg text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-5xl font-bold mb-4">Work With Nes</h2>
+                <p class="text-xl max-w-3xl mx-auto mb-16 opacity-90">
+                    Choose the path that best supports your goals, whether you need personalized 1:1 guidance or a supportive community program.
+                </p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Service Card 1: 1:1 Coaching -->
+                    <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <i data-lucide="heart-handshake" class="sage-text w-10 h-10 mb-4 mx-auto"></i>
+                        <h3 class="text-3xl font-semibold mb-3">1:1 Private Coaching</h3>
+                        <p class="text-gray-600 mb-6">
+                            Deep dive into your unique health history, lifestyle, and goals. Get fully customized meal plans and ongoing support.
+                        </p>
+                        <ul class="text-left space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Personalized Protocol</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Weekly Check-ins</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Unlimited Messaging</li>
+                        </ul>
+                        <a href="#contact" class="inline-block px-6 py-3 terracotta-bg rounded-xl text-white font-medium hover:opacity-90 transition">
+                            Inquire Now
+                        </a>
+                    </div>
+
+                    <!-- Service Card 2: Group Program -->
+                    <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <i data-lucide="users" class="sage-text w-10 h-10 mb-4 mx-auto"></i>
+                        <h3 class="text-3xl font-semibold mb-3">The Balance Collective</h3>
+                        <p class="text-gray-600 mb-6">
+                            A 6-week program focused on gut health, hormone balance, and stress reduction within a supportive community.
+                        </p>
+                        <ul class="text-left space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Live Group Calls</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Exclusive Resource Library</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Community Forum Access</li>
+                        </ul>
+                        <a href="#contact" class="inline-block px-6 py-3 terracotta-bg rounded-xl text-white font-medium hover:opacity-90 transition">
+                            Join Waitlist
+                        </a>
+                    </div>
+
+                     <!-- Service Card 3: Resources -->
+                    <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 lg:col-span-1 md:col-span-2 md:max-w-md md:mx-auto lg:max-w-none">
+                        <i data-lucide="book-open-text" class="sage-text w-10 h-10 mb-4 mx-auto"></i>
+                        <h3 class="text-3xl font-semibold mb-3">Free Resource Library</h3>
+                        <p class="text-gray-600 mb-6">
+                            Download free guides, checklists, and templates on mindful eating, essential supplements, and building healthy routines.
+                        </p>
+                        <ul class="text-left space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Sleep Hygiene Guide (PDF)</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>5-Day Meal Prep Planner</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Hydration Checklist</li>
+                        </ul>
+                        <a href="#newsletter" class="inline-block px-6 py-3 terracotta-bg rounded-xl text-white font-medium hover:opacity-90 transition">
+                            Get Instant Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Recipes & Blog Preview -->
+        <section id="recipes" class="py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold mb-4">Latest Wellness Recipes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Delicious, nourishing, and easy-to-make recipes that support your health goals.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Recipe Card 1 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.01]">
+                        <img src="https://placehold.co/600x400/8da9a7/ffffff?text=Gut-Friendly+Smoothie" alt="A photo of a green smoothie." class="w-full h-56 object-cover" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/8da9a7/ffffff?text=Gut-Friendly+Smoothie';">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold sage-text uppercase tracking-wider">Gut Health</span>
+                            <h3 class="text-2xl font-semibold mt-2 mb-3">5-Minute Probiotic Smoothie</h3>
+                            <p class="text-gray-600 text-sm">A quick and creamy breakfast packed with fiber and beneficial bacteria to start your day right.</p>
+                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm sage-text hover:text-gray-800 transition">
+                                Read Recipe <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe Card 2 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.01]">
+                        <img src="https://placehold.co/600x400/f7a890/ffffff?text=Sheet+Pan+Dinner" alt="A photo of a roasted chicken and vegetables." class="w-full h-56 object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/f7a890/ffffff?text=Sheet+Pan+Dinner';">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold sage-text uppercase tracking-wider">Weeknight Meal</span>
+                            <h3 class="text-2xl font-semibold mt-2 mb-3">Balanced Sheet Pan Chicken</h3>
+                            <p class="text-gray-600 text-sm">Minimize cleanup with this high-protein, veggie-packed dinner. Perfect for busy evenings.</p>
+                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm sage-text hover:text-gray-800 transition">
+                                Read Recipe <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe Card 3 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.01]">
+                        <img src="https://placehold.co/600x400/fdfdfb/8da9a7?text=Mindful+Eating+Post" alt="A photo of a hand reaching for a bowl of oats." class="w-full h-56 object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/fdfdfb/8da9a7?text=Mindful+Eating+Post';">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold sage-text uppercase tracking-wider">Mindfulness</span>
+                            <h3 class="text-2xl font-semibold mt-2 mb-3">Mindful Eating 101 Guide</h3>
+                            <p class="text-gray-600 text-sm">Beyond the plate: learn techniques to truly connect with your food and improve digestion.</p>
+                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm sage-text hover:text-gray-800 transition">
+                                Read Guide <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-xl sage-text hover:bg-gray-100 transition duration-300">
+                        View All Blog Posts
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. About Section -->
+        <section id="about" class="py-20 md:py-32 bg-gray-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                 <!-- Text Content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-5xl font-bold mb-4">Hi, I'm Nes.</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        I'm a Certified Nutrition Consultant specializing in **hormone balance** and **sustainable weight management**. After years of navigating my own health challenges, I founded Nourish with Nes to cut through the noise of diet culture and help women find peace with food.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        My philosophy is simple: we focus on nourishing your body, not punishing it. My approach is holistic, combining evidence-based nutrition with lifestyle practices like stress reduction, optimal sleep, and joyful movement.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg sage-bg hover:opacity-90 transition duration-300 text-white">
+                        My Credentials & Philosophy
+                    </a>
+                </div>
+                
+                <!-- Image Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x600/fdfdfb/8da9a7?text=Nes+Smiling+Candid" 
+                         alt="A candid photo of Nes smiling while preparing food." 
+                         class="rounded-3xl shadow-xl w-full h-auto object-cover"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/fdfdfb/8da9a7?text=Nes+Smiling+Candid';">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Instagram Feed Simulation (Visual Consistency) -->
+        <section class="py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-5xl font-bold mb-4">@nourishwithnes on Instagram</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                    Daily tips, myth-busting, and recipe reels—where it all began!
+                </p>
+                
+                <div class="insta-grid max-w-5xl mx-auto">
+                    <!-- Placeholder Images simulating the clean, bright feed -->
+                    <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x400/f7f7f7/8da9a7?text=Balanced+Plate" alt="Instagram Post 1" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x400/8da9a7/ffffff?text=Wellness+Tip" alt="Instagram Post 2" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x400/fdfdfb/f7a890?text=Mindfulness+Quote" alt="Instagram Post 3" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 hidden sm:block">
+                        <img src="https://placehold.co/400x400/f7a890/ffffff?text=Smoothie+Recipe" alt="Instagram Post 4" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 hidden md:block">
+                        <img src="https://placehold.co/400x400/f7f7f7/8da9a7?text=Meal+Prep+Idea" alt="Instagram Post 5" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 hidden md:block">
+                        <img src="https://placehold.co/400x400/8da9a7/ffffff?text=Hormone+Fact" alt="Instagram Post 6" class="w-full h-full object-cover">
+                    </a>
+                </div>
+                
+                <div class="mt-12">
+                    <a href="https://instagram.com/nourishwithnes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl terracotta-bg hover:opacity-90 transition duration-300 text-white shadow-lg">
+                        Follow on Instagram <i data-lucide="instagram" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Newsletter Sign-up / Contact CTA -->
+        <section id="newsletter" class="py-16 sage-bg">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h2 class="text-4xl font-bold mb-3">Get the Free 7-Day Meal Plan</h2>
+                <p class="text-xl opacity-90 mb-8">
+                    Join my newsletter for weekly tips, exclusive recipes, and instant access to the free guide.
+                </p>
+                <form id="contact" class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Enter your email address" required 
+                           class="w-full md:w-2/3 p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white text-gray-800">
+                    <button type="submit" class="w-full md:w-1/3 p-3 rounded-xl font-medium terracotta-bg hover:opacity-90 transition duration-300 shadow-md">
+                        Sign Me Up!
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-gray-300 transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                <a href="#" class="hover:text-gray-300 transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                <a href="#" class="hover:text-gray-300 transition"><i data-lucide="mail" class="w-6 h-6"></i></a>
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2025 Nourish with Nes. All rights reserved. | Holistic Nutrition Consultant</p>
+            <p class="text-xs text-gray-500 mt-2">Disclaimer: This information is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
