@@ -12,10 +12,11 @@
         /* Define custom colors and font */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
         
+        /* UPDATED: Pastel Color Palette */
         :root {
-            --color-cream: #FDFDFB;
-            --color-sage: #8da9a7;
-            --color-terracotta: #F7A890;
+            --color-cream: #FDFDFB;      /* Light Background */
+            --color-mint: #B2D8D8;       /* Pastel Mint (Primary Accent) */
+            --color-rose: #FFB7C5;       /* Soft Rose (CTA Accent) */
         }
         
         body {
@@ -28,9 +29,10 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .sage-bg { background-color: var(--color-sage); }
-        .sage-text { color: var(--color-sage); }
-        .terracotta-bg { background-color: var(--color-terracotta); }
+        /* UPDATED CLASS DEFINITIONS */
+        .mint-bg { background-color: var(--color-mint); }
+        .mint-text { color: var(--color-mint); }
+        .rose-bg { background-color: var(--color-rose); }
         
         /* Utility for the Instagram feed simulation */
         .insta-grid {
@@ -44,10 +46,10 @@
             }
         }
         
-        /* NEW: Utility for adding a subtle floral/textured background to light sections */
+        /* UPDATED: Subtle texture color to match the new Rose accent */
         .subtle-texture {
-            /* Applies a very faint, repeating terracotta dot pattern */
-            background-image: radial-gradient(rgba(247, 168, 144, 0.2) 0.5px, transparent 0.5px);
+            /* Applies a very faint, repeating rose dot pattern */
+            background-image: radial-gradient(rgba(255, 183, 197, 0.4) 0.5px, transparent 0.5px);
             background-size: 20px 20px;
         }
     </style>
@@ -57,7 +59,8 @@
     <!-- Navigation Bar -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold sage-text">Nourish with Nes</a>
+            <!-- UPDATED: Text color is now mint-text -->
+            <a href="#" class="text-2xl font-bold mint-text">Nourish with Nes</a>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#services" class="hover:text-gray-900 transition duration-300">Work With Me</a>
                 <a href="#recipes" class="hover:text-gray-900 transition duration-300">Recipes & Blog</a>
@@ -80,35 +83,37 @@
     </header>
 
     <main>
-        <!-- 1. Hero Section (Now with subtle floral texture) -->
+        <!-- 1. Hero Section -->
         <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden subtle-texture">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
                 
                 <!-- Text Content -->
                 <div class="md:w-1/2 order-2 md:order-1 text-center md:text-left">
                     <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
-                        Nourish Your Body. <span class="sage-text">Transform Your Health.</span>
+                        Nourish Your Body. <span class="mint-text">Transform Your Health.</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
                         Holistic nutrition coaching to help you achieve balance, confidence, and vibrant well-being—without restrictive dieting.
                     </p>
-                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-lg terracotta-bg hover:opacity-90 transition duration-300 text-white transform hover:scale-[1.02]">
+                    <!-- UPDATED: Button color is now rose-bg -->
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-lg rose-bg hover:opacity-90 transition duration-300 text-white transform hover:scale-[1.02]">
                         Start Your Wellness Journey <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                     </a>
                 </div>
 
-                <!-- Image Placeholder (Updated to suggest floral elements) -->
+                <!-- Image Placeholder -->
                 <div class="md:w-1/2 order-1 md:order-2">
-                    <img src="https://placehold.co/800x800/8da9a7/ffffff?text=Nes+Portrait+with+Floral+Scarf" 
+                    <img src="https://placehold.co/800x800/b2d8d8/333333?text=Nes+Portrait+with+Floral+Scarf" 
                          alt="Professional portrait of Nes, a smiling nutritionist." 
                          class="rounded-3xl shadow-2xl object-cover w-full h-auto transform rotate-1 transition duration-500 hover:rotate-0"
-                         onerror="this.onerror=null;this.src='https://placehold.co/800x800/8da9a7/ffffff?text=Nes+Portrait+with+Floral+Scarf';" />
+                         onerror="this.onerror=null;this.src='https://placehold.co/800x800/b2d8d8/333333?text=Nes+Portrait+with+Floral+Scarf';" />
                 </div>
             </div>
         </section>
 
-        <!-- 2. Services Section (Work With Me) - No floral texture needed on sage background -->
-        <section id="services" class="py-20 md:py-32 sage-bg text-white">
+        <!-- 2. Services Section (Work With Me) -->
+        <!-- UPDATED: Background is now mint-bg and text is dark (text-gray-800) -->
+        <section id="services" class="py-20 md:py-32 mint-bg text-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-5xl font-bold mb-4">Work With Nes</h2>
                 <p class="text-xl max-w-3xl mx-auto mb-16 opacity-90">
@@ -119,51 +124,60 @@
                     
                     <!-- Service Card 1: 1:1 Coaching -->
                     <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <i data-lucide="heart-handshake" class="sage-text w-10 h-10 mb-4 mx-auto"></i>
+                        <!-- UPDATED: Icon color is now mint-text -->
+                        <i data-lucide="heart-handshake" class="mint-text w-10 h-10 mb-4 mx-auto"></i>
                         <h3 class="text-3xl font-semibold mb-3">1:1 Private Coaching</h3>
                         <p class="text-gray-600 mb-6">
                             Deep dive into your unique health history, lifestyle, and goals. Get fully customized meal plans and ongoing support.
                         </p>
                         <ul class="text-left space-y-2 mb-6 text-sm text-gray-700">
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Personalized Protocol</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Weekly Check-ins</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Unlimited Messaging</li>
+                            <!-- UPDATED: Checkmark color is now mint-text -->
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Personalized Protocol</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Weekly Check-ins</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Unlimited Messaging</li>
                         </ul>
-                        <a href="#contact" class="inline-block px-6 py-3 terracotta-bg rounded-xl text-white font-medium hover:opacity-90 transition">
+                        <!-- UPDATED: Button color is now rose-bg -->
+                        <a href="#contact" class="inline-block px-6 py-3 rose-bg rounded-xl text-white font-medium hover:opacity-90 transition">
                             Inquire Now
                         </a>
                     </div>
 
                     <!-- Service Card 2: Group Program -->
                     <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <i data-lucide="users" class="sage-text w-10 h-10 mb-4 mx-auto"></i>
+                        <!-- UPDATED: Icon color is now mint-text -->
+                        <i data-lucide="users" class="mint-text w-10 h-10 mb-4 mx-auto"></i>
                         <h3 class="text-3xl font-semibold mb-3">The Balance Collective</h3>
                         <p class="text-gray-600 mb-6">
                             A 6-week program focused on gut health, hormone balance, and stress reduction within a supportive community.
                         </p>
                         <ul class="text-left space-y-2 mb-6 text-sm text-gray-700">
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Live Group Calls</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Exclusive Resource Library</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Community Forum Access</li>
+                            <!-- UPDATED: Checkmark color is now mint-text -->
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Live Group Calls</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Exclusive Resource Library</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Community Forum Access</li>
                         </ul>
-                        <a href="#contact" class="inline-block px-6 py-3 terracotta-bg rounded-xl text-white font-medium hover:opacity-90 transition">
+                        <!-- UPDATED: Button color is now rose-bg -->
+                        <a href="#contact" class="inline-block px-6 py-3 rose-bg rounded-xl text-white font-medium hover:opacity-90 transition">
                             Join Waitlist
                         </a>
                     </div>
 
                      <!-- Service Card 3: Resources -->
                     <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 lg:col-span-1 md:col-span-2 md:max-w-md md:mx-auto lg:max-w-none">
-                        <i data-lucide="book-open-text" class="sage-text w-10 h-10 mb-4 mx-auto"></i>
+                        <!-- UPDATED: Icon color is now mint-text -->
+                        <i data-lucide="book-open-text" class="mint-text w-10 h-10 mb-4 mx-auto"></i>
                         <h3 class="text-3xl font-semibold mb-3">Free Resource Library</h3>
                         <p class="text-gray-600 mb-6">
                             Download free guides, checklists, and templates on mindful eating, essential supplements, and building healthy routines.
                         </p>
                         <ul class="text-left space-y-2 mb-6 text-sm text-gray-700">
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Sleep Hygiene Guide (PDF)</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>5-Day Meal Prep Planner</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 sage-text mr-2"></i>Hydration Checklist</li>
+                            <!-- UPDATED: Checkmark color is now mint-text -->
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Sleep Hygiene Guide (PDF)</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>5-Day Meal Prep Planner</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mint-text mr-2"></i>Hydration Checklist</li>
                         </ul>
-                        <a href="#newsletter" class="inline-block px-6 py-3 terracotta-bg rounded-xl text-white font-medium hover:opacity-90 transition">
+                        <!-- UPDATED: Button color is now rose-bg -->
+                        <a href="#newsletter" class="inline-block px-6 py-3 rose-bg rounded-xl text-white font-medium hover:opacity-90 transition">
                             Get Instant Access
                         </a>
                     </div>
@@ -171,7 +185,7 @@
             </div>
         </section>
 
-        <!-- 3. Recipes & Blog Preview (Now with subtle floral texture) -->
+        <!-- 3. Recipes & Blog Preview -->
         <section id="recipes" class="py-20 md:py-32 subtle-texture">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -183,43 +197,49 @@
                 
                 <div class="grid md:grid-cols-3 gap-8">
                     
-                    <!-- Recipe Card 1 (Updated to suggest floral elements) -->
+                    <!-- Recipe Card 1 -->
                     <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.01]">
-                        <img src="https://placehold.co/600x400/8da9a7/ffffff?text=Smoothie+with+Floral+Garnish" alt="A photo of a green smoothie." class="w-full h-56 object-cover" 
-                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/8da9a7/ffffff?text=Smoothie+with+Floral+Garnish';">
+                        <img src="https://placehold.co/600x400/b2d8d8/333333?text=Smoothie+with+Floral+Garnish" alt="A photo of a green smoothie." class="w-full h-56 object-cover" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/b2d8d8/333333?text=Smoothie+with+Floral+Garnish';">
                         <div class="p-6">
-                            <span class="text-xs font-semibold sage-text uppercase tracking-wider">Gut Health</span>
+                            <!-- UPDATED: Text color is now mint-text -->
+                            <span class="text-xs font-semibold mint-text uppercase tracking-wider">Gut Health</span>
                             <h3 class="text-2xl font-semibold mt-2 mb-3">5-Minute Probiotic Smoothie</h3>
                             <p class="text-gray-600 text-sm">A quick and creamy breakfast packed with fiber and beneficial bacteria to start your day right.</p>
-                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm sage-text hover:text-gray-800 transition">
+                            <!-- UPDATED: Link color is now mint-text -->
+                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm mint-text hover:text-gray-800 transition">
                                 Read Recipe <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
                             </a>
                         </div>
                     </article>
 
-                    <!-- Recipe Card 2 (Updated to suggest floral elements) -->
+                    <!-- Recipe Card 2 -->
                     <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.01]">
-                        <img src="https://placehold.co/600x400/f7a890/ffffff?text=Dinner+on+Floral+Plate" alt="A photo of a roasted chicken and vegetables." class="w-full h-56 object-cover"
-                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/f7a890/ffffff?text=Dinner+on+Floral+Plate';">
+                        <img src="https://placehold.co/600x400/ffb7c5/333333?text=Dinner+on+Floral+Plate" alt="A photo of a roasted chicken and vegetables." class="w-full h-56 object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffb7c5/333333?text=Dinner+on+Floral+Plate';">
                         <div class="p-6">
-                            <span class="text-xs font-semibold sage-text uppercase tracking-wider">Weeknight Meal</span>
+                            <!-- UPDATED: Text color is now mint-text -->
+                            <span class="text-xs font-semibold mint-text uppercase tracking-wider">Weeknight Meal</span>
                             <h3 class="text-2xl font-semibold mt-2 mb-3">Balanced Sheet Pan Chicken</h3>
                             <p class="text-gray-600 text-sm">Minimize cleanup with this high-protein, veggie-packed dinner. Perfect for busy evenings.</p>
-                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm sage-text hover:text-gray-800 transition">
+                            <!-- UPDATED: Link color is now mint-text -->
+                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm mint-text hover:text-gray-800 transition">
                                 Read Recipe <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
                             </a>
                         </div>
                     </article>
 
-                    <!-- Recipe Card 3 (Updated to suggest floral elements) -->
+                    <!-- Recipe Card 3 -->
                     <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.01]">
-                        <img src="https://placehold.co/600x400/fdfdfb/8da9a7?text=Oats+in+Floral+Bowl" alt="A photo of a hand reaching for a bowl of oats." class="w-full h-56 object-cover"
-                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/fdfdfb/8da9a7?text=Oats+in+Floral+Bowl';">
+                        <img src="https://placehold.co/600x400/fdfdfb/b2d8d8?text=Oats+in+Floral+Bowl" alt="A photo of a hand reaching for a bowl of oats." class="w-full h-56 object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/fdfdfb/b2d8d8?text=Oats+in+Floral+Bowl';">
                         <div class="p-6">
-                            <span class="text-xs font-semibold sage-text uppercase tracking-wider">Mindfulness</span>
+                            <!-- UPDATED: Text color is now mint-text -->
+                            <span class="text-xs font-semibold mint-text uppercase tracking-wider">Mindfulness</span>
                             <h3 class="text-2xl font-semibold mt-2 mb-3">Mindful Eating 101 Guide</h3>
                             <p class="text-gray-600 text-sm">Beyond the plate: learn techniques to truly connect with your food and improve digestion.</p>
-                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm sage-text hover:text-gray-800 transition">
+                            <!-- UPDATED: Link color is now mint-text -->
+                            <a href="#" class="mt-4 inline-flex items-center font-medium text-sm mint-text hover:text-gray-800 transition">
                                 Read Guide <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
                             </a>
                         </div>
@@ -227,14 +247,15 @@
                 </div>
                 
                 <div class="text-center mt-12">
-                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-xl sage-text hover:bg-gray-100 transition duration-300">
+                    <!-- UPDATED: Text color is now mint-text -->
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-xl mint-text hover:bg-gray-100 transition duration-300">
                         View All Blog Posts
                     </a>
                 </div>
             </div>
         </section>
         
-        <!-- 4. About Section (Now with subtle floral texture) -->
+        <!-- 4. About Section -->
         <section id="about" class="py-20 md:py-32 subtle-texture">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
                  <!-- Text Content -->
@@ -246,17 +267,18 @@
                     <p class="text-lg text-gray-600 mb-6">
                         My philosophy is simple: we focus on nourishing your body, not punishing it. My approach is holistic, combining evidence-based nutrition with lifestyle practices like stress reduction, optimal sleep, and joyful movement.
                     </p>
-                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg sage-bg hover:opacity-90 transition duration-300 text-white">
+                    <!-- UPDATED: Button color is now mint-bg -->
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg mint-bg hover:opacity-90 transition duration-300 text-white">
                         My Credentials & Philosophy
                     </a>
                 </div>
                 
-                <!-- Image Placeholder (Updated to suggest floral elements) -->
+                <!-- Image Placeholder -->
                 <div class="md:w-1/2">
-                    <img src="https://placehold.co/600x600/fdfdfb/8da9a7?text=Nes+in+Kitchen+with+Floral+Accessories" 
+                    <img src="https://placehold.co/600x600/fdfdfb/b2d8d8?text=Nes+in+Kitchen+with+Floral+Accessories" 
                          alt="A candid photo of Nes smiling while preparing food." 
                          class="rounded-3xl shadow-xl w-full h-auto object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/fdfdfb/8da9a7?text=Nes+in+Kitchen+with+Floral+Accessories';">
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/fdfdfb/b2d8d8?text=Nes+in+Kitchen+with+Floral+Accessories';">
                 </div>
             </div>
         </section>
@@ -272,27 +294,28 @@
                 <div class="insta-grid max-w-5xl mx-auto">
                     <!-- Placeholder Images simulating the clean, bright feed -->
                     <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="https://placehold.co/400x400/f7f7f7/8da9a7?text=Balanced+Plate" alt="Instagram Post 1" class="w-full h-full object-cover">
+                        <img src="https://placehold.co/400x400/f7f7f7/b2d8d8?text=Balanced+Plate" alt="Instagram Post 1" class="w-full h-full object-cover">
                     </a>
                     <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="https://placehold.co/400x400/8da9a7/ffffff?text=Wellness+Tip" alt="Instagram Post 2" class="w-full h-full object-cover">
+                        <img src="https://placehold.co/400x400/b2d8d8/ffffff?text=Wellness+Tip" alt="Instagram Post 2" class="w-full h-full object-cover">
                     </a>
                     <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="https://placehold.co/400x400/fdfdfb/f7a890?text=Mindfulness+Quote" alt="Instagram Post 3" class="w-full h-full object-cover">
+                        <img src="https://placehold.co/400x400/fdfdfb/ffb7c5?text=Mindfulness+Quote" alt="Instagram Post 3" class="w-full h-full object-cover">
                     </a>
                     <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 hidden sm:block">
-                        <img src="https://placehold.co/400x400/f7a890/ffffff?text=Smoothie+Recipe" alt="Instagram Post 4" class="w-full h-full object-cover">
+                        <img src="https://placehold.co/400x400/ffb7c5/ffffff?text=Smoothie+Recipe" alt="Instagram Post 4" class="w-full h-full object-cover">
                     </a>
                     <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 hidden md:block">
-                        <img src="https://placehold.co/400x400/f7f7f7/8da9a7?text=Meal+Prep+Idea" alt="Instagram Post 5" class="w-full h-full object-cover">
+                        <img src="https://placehold.co/400x400/f7f7f7/b2d8d8?text=Meal+Prep+Idea" alt="Instagram Post 5" class="w-full h-full object-cover">
                     </a>
                     <a href="#" class="block aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 hidden md:block">
-                        <img src="https://placehold.co/400x400/8da9a7/ffffff?text=Hormone+Fact" alt="Instagram Post 6" class="w-full h-full object-cover">
+                        <img src="https://placehold.co/400x400/b2d8d8/ffffff?text=Hormone+Fact" alt="Instagram Post 6" class="w-full h-full object-cover">
                     </a>
                 </div>
                 
                 <div class="mt-12">
-                    <a href="https://instagram.com/nourishwithnes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl terracotta-bg hover:opacity-90 transition duration-300 text-white shadow-lg">
+                    <!-- UPDATED: Button color is now rose-bg -->
+                    <a href="https://instagram.com/nourishwithnes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl rose-bg hover:opacity-90 transition duration-300 text-white shadow-lg">
                         Follow on Instagram <i data-lucide="instagram" class="w-4 h-4 ml-2"></i>
                     </a>
                 </div>
@@ -300,8 +323,9 @@
         </section>
 
         <!-- 6. Newsletter Sign-up / Contact CTA -->
-        <section id="newsletter" class="py-16 sage-bg">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <!-- UPDATED: Background is now mint-bg and text is dark (text-gray-800) -->
+        <section id="newsletter" class="py-16 mint-bg text-gray-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl font-bold mb-3">Get the Free 7-Day Meal Plan</h2>
                 <p class="text-xl opacity-90 mb-8">
                     Join my newsletter for weekly tips, exclusive recipes, and instant access to the free guide.
@@ -309,7 +333,8 @@
                 <form id="contact" class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
                     <input type="email" placeholder="Enter your email address" required 
                            class="w-full md:w-2/3 p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white text-gray-800">
-                    <button type="submit" class="w-full md:w-1/3 p-3 rounded-xl font-medium terracotta-bg hover:opacity-90 transition duration-300 shadow-md">
+                    <!-- UPDATED: Button color is now rose-bg -->
+                    <button type="submit" class="w-full md:w-1/3 p-3 rounded-xl font-medium rose-bg hover:opacity-90 transition duration-300 text-white shadow-md">
                         Sign Me Up!
                     </button>
                 </form>
@@ -336,4 +361,5 @@
     </script>
 </body>
 </html>
+
 
